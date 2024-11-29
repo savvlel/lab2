@@ -10,7 +10,7 @@ def test_add():
 
 def test_capital():
     assert capital('aaa') == 'Aaa'
-    assert capital('AAA') == 'AAA'
+    assert capital('AAA') == 'Aaa'
     assert capital('123') == '123'
 
 
