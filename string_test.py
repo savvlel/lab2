@@ -15,9 +15,9 @@ def test_capital():
 
 
 def test_up():
-    assert capital('aaa') == 'AAA'
-    assert capital('AAA') == 'AAA'
-    assert capital('123') == '123'
+    assert up('aaa') == 'AAA'
+    assert up('AAA') == 'AAA'
+    assert up('123') == '123'
 
 
 def test_not_string():
