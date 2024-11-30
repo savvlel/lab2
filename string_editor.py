@@ -21,6 +21,7 @@ def up(string):
 
 
 def reverse(string):
+    # возвращает реверснутую строку
     string = str(string)
     return string[::-1]
 
