@@ -13,6 +13,7 @@ def test_capital():
     assert capital('aaa') == 'Aaa'
     assert capital('AAA') == 'Aaa'
     assert capital('123') == '123'
+    assert capital('aAA') == 'Aaa'
 
 
 def test_up():
