@@ -37,13 +37,10 @@ jobs:
 
   auto-merge:
     runs-on: ubuntu-latest
-    needs: build  # Этот шаг запускается только после успешного прохождения тестов
-    permissions:
-      contents: write
-      pull-requests: write
+    needs: build  
+    if: github.event_name == "pull_request" && success
     steps:
-      - id: automerge
-        name: automerge
+      - name: automerge
         uses: "pascalgn/automerge-action@v0.16.4"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
