@@ -40,7 +40,7 @@ jobs:
     needs: build  # Этот шаг запускается только после успешного прохождения тестов
     steps:
       - name: Auto-merge PR
-        uses: peter-evans/auto-merge-action@v1
+        uses: peter-evans/enable-pull-request-automerge@v3
         with:
           merge-method: squash  # Может быть: merge, squash, rebase
           github-token: ${{ secrets.GITHUB_TOKEN }}  # Токен для доступа к API
