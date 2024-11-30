@@ -39,8 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build  # Этот шаг запускается только после успешного прохождения тестов
     steps:
-      - name: Auto-merge PR
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          merge-method: squash  # Может быть: merge, squash, rebase
-          github-token: ${{ secrets.GITHUB_TOKEN }}  # Токен для доступа к API
+      - name: Enable Pull Request Automerge
+        run: gh pr merge --merge --auto "1"
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
