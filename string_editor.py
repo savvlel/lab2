@@ -18,3 +18,12 @@ def up(string):
     if type(string) != str:
         raise ValueError('Введена не строка')
     return string.upper()
+
+
+def reverse(string):
+    # возвращает реверснутую строку
+    string = str(string)
+    return string[::-1]
+
+
+
