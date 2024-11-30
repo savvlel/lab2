@@ -6,6 +6,7 @@ def test_add():
     assert add('a', 'b') == 'ab'
     assert add(2, 3) =='23'
     assert add('a', 1, 'b') == 'a1b'
+    assert add(1.5, 'a') =='1.5a' # новый тест с числом с плавающей точкой
 
 
 def test_capital():
