@@ -1,5 +1,5 @@
 import pytest
-from string_editor import add, capital, up
+from string_editor import add, capital, up, reverse
 
 
 def test_add():
@@ -18,6 +18,12 @@ def test_up():
     assert up('aaa') == 'AAA'
     assert up('AAA') == 'AAA'
     assert up('123') == '123'
+
+
+def test_reverse():
+    assert reverse('abc') == 'cba'
+    assert reverse(123) == '321'
+    assert reverse(1.25) == '52.1'
 
 
 def test_not_string():
